@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test Veeam</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+    <div class="wrapper">
+        <div class="photo_and_links white_bg_with_shadow" >
+            <input type="file" id="files_photo" name="file" accept="image/*"/>
+            <label for="files_photo">
+                <div class="wrapper_main_profile_photo">
+                    <img src="" alt="Главное фото профиля" id="main_profile_photo">
+                </div>
+            </label>
+            <ul class="list_links">
+                <li><a href="#" class="link_color_decoration">My account</a></li>
+                <li><a href="#" class="link_color_decoration">Messages</a></li>
+                <li><a href="#" class="link_color_decoration">News</a></li>
+                <li><a href="#" class="link_color_decoration">Photos</a></li>
+                <li><a href="#" class="link_color_decoration">Video</a></li>
+                <li><a href="#" class="link_color_decoration">Bookmarks</a></li>
+            </ul>
+        </div>
+        <div class="about_and_social">
+            <div class="about_profile white_bg_with_shadow" id="about_profile">
+                <div class="about_information_block">
+                    <p class="name">
+                        <span id="first_name"></span>
+                        <span id="middle_name"></span>
+                        <span id="last_name"></span>
+                    </p>
+                    <p>email: <a href="" id="email"></a></p>
+                    <p>phone: <a href="" id="phone"></a></p>
+                    <p id="address"></p>
+                </div>
+                <div class="nav_counts">
+                    <div>
+                        <span>11</span>
+                        <p>New messages</p>
+                    </div>
+                    <div class="empty_links">
+                        <span>0</span>
+                        <p>New request</p>
+                    </div>
+                    <div>
+                        <span>7</span>
+                        <p>New photos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="friends_and_posts white_bg_with_shadow">
+                    <input id="tab_friends" type="radio" name="tabs" checked>
+                    <label for="tab_friends">Friends</label>
+                    <input id="tab_posts" type="radio" name="tabs">
+                    <label for="tab_posts" id="tab_posts_for_height">Posts</label>
+
+                    <div id="line_between_nav"></div>
+                    <section id="friends_with_search">
+                        <input type="text" id="autocomplete" placeholder="filter friends">
+                        <div id="friends"></div>
+                    </section>
+                    <section id="posts">
+                    </section>
+                </div>
+        </div>
+    </div>
+    <script src="links.js"></script>
+    <script src="index.js"></script>
+    <script src="rendering.js"></script>
+</body>
+</html>

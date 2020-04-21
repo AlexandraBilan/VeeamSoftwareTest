@@ -1,0 +1,315 @@
+#body{
+    margin: 0;
+    padding: 15px;
+    background: #E5E5E5;
+    font-family: Roboto, sans-serif;
+}
+:root {
+    --text-color: #000;
+    --link-color: #9191FF;
+    --transparent-color: #C4C4C4;
+}
+.hide {
+    display: none;
+}
+p, ul, h3{
+    margin: 0;
+    padding: 0;
+}
+.link_color_decoration{
+    color: var(--link-color);
+    text-decoration: unset;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    margin: 0 auto auto;
+}
+.wrapper .white_bg_with_shadow{
+    background: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+.wrapper .photo_and_links{
+    padding: 30px 45px;
+    width: max-content;
+    margin-right: 30px;
+    height: fit-content;
+    margin-bottom: 30px;
+}
+.wrapper .photo_and_links #main_profile_photo{
+    width: 300px;
+    height: 300px;
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 45px;
+}
+.wrapper .photo_and_links #files_photo{
+    position: absolute;
+    display: none;
+}
+.wrapper .photo_and_links .wrapper_main_profile_photo{
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.wrapper .photo_and_links .wrapper_main_profile_photo::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(0,0,0,.5);
+    display: none;
+}
+.wrapper .photo_and_links .wrapper_main_profile_photo:hover::before{
+    display: block;
+}
+.wrapper .photo_and_links .wrapper_main_profile_photo::after{
+    content: url("edit_pencil.svg");
+    position: absolute;
+    left: 44%;
+    top: 44%;
+    display: none;
+}
+.wrapper .photo_and_links .wrapper_main_profile_photo:hover::after{
+    display: block;
+}
+.wrapper .photo_and_links .list_links{
+    list-style: none;
+}
+.wrapper .photo_and_links .list_links li a{
+    color: var(--link-color);
+    font-size: 24px;
+    line-height: 160%;
+    text-transform: capitalize;
+    text-decoration: unset;
+}
+.wrapper .about_and_social{
+    width: 810px;
+}
+.wrapper .about_and_social .about_profile .about_information_block{
+    padding: 30px 45px 0;
+}
+.wrapper .about_and_social .about_profile .about_information_block p{
+    line-height: 160%;
+    font-size: 36px;
+    color: var(--text-color);
+}
+.wrapper .about_and_social .about_profile .about_information_block p a{
+    color: var(--link-color);
+    text-decoration: unset;
+}
+.wrapper .about_and_social .about_profile .nav_counts{
+    display: flex;
+    color: var(--text-color);
+    justify-content: space-around;
+    border-top: 1px solid #E5E5E5;
+    padding: 15px 105px;
+    text-align: center;
+}
+.wrapper .about_and_social .about_profile .nav_counts div{
+    cursor: pointer;
+}
+.wrapper .about_and_social .about_profile .nav_counts div span{
+    font-size: 24px;
+}
+.wrapper .about_and_social .about_profile .nav_counts div.empty_links{
+    color: #C4C4C4;
+    cursor: unset;
+}
+.wrapper .about_and_social .about_profile{
+    margin-bottom: 30px;
+}
+.wrapper .about_and_social .friends_and_posts #friends_with_search{
+    position: relative;
+    padding-top: 30px;
+}
+.wrapper .about_and_social .friends_and_posts #friends_with_search #autocomplete{
+    position: absolute;
+    outline: unset;
+    text-align: right;
+    border: 1px solid #E5E5E5;
+    padding: 0 15px;
+    line-height: 30px;
+    right: 45px;
+    top: 15px;
+}
+.wrapper .about_and_social .friends_and_posts #friends_with_search #autocomplete::placeholder{
+    color: #C4C4C4;
+}
+.wrapper .about_and_social .friends_and_posts #friends_with_search #friends>div{
+    display: flex;
+    justify-content: left;
+    margin: 30px 0 0 45px;
+}
+.wrapper .about_and_social .friends_and_posts #friends_with_search>div img{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+.wrapper .about_and_social .friends_and_posts #friends_with_search>div p{
+    font-size: 24px;
+    line-height: 160%;
+}
+#line_between_nav{
+    width: 100%;
+    height: 1px;
+    background: #E5E5E5;
+}
+.wrapper .about_and_social .friends_and_posts #friends_with_search #friends #pagination_div{
+    display: flex;
+    justify-content: center;
+    margin: 24px 0 0;
+}
+.wrapper .about_and_social .friends_and_posts #friends_with_search #pagination_div button{
+    background: unset;
+    border: unset;
+    padding-bottom: 17px;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 160%;
+    outline: unset;
+}
+.wrapper .about_and_social .friends_and_posts #friends_with_search #pagination_div button.active{
+    color: #FF0000;
+}
+
+.wrapper .about_and_social .friends_and_posts>section {
+    display: none;
+}
+.wrapper .about_and_social .friends_and_posts>input {
+    display: none;
+    position: absolute;
+}
+.wrapper .about_and_social .friends_and_posts>label {
+    color: var(--text-color);
+    width: 270px;
+    line-height: 50px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 15px;
+    cursor: pointer;
+}
+.wrapper .about_and_social .friends_and_posts>label:nth-child(2){
+    margin-left: 15px;
+}
+.wrapper .about_and_social .friends_and_posts>input:checked+label {
+    border-bottom: 2px solid #E5E5E5;
+}
+#tab_friends:checked~#friends_with_search, #tab_posts:checked~#posts{
+    display: block;
+}
+.wrapper .about_and_social .friends_and_posts #posts{
+    overflow-y: scroll;
+    margin: 0 30px;
+}
+.wrapper .about_and_social .friends_and_posts #posts::-webkit-scrollbar {
+    width: 5px;
+    height: 3px;
+}
+.wrapper .about_and_social .friends_and_posts #posts::-webkit-scrollbar-button {
+    background-color: #fff;
+    height: 30px;
+}
+.wrapper .about_and_social .friends_and_posts #posts::-webkit-scrollbar-track {
+    background-color: #999;
+}
+.wrapper .about_and_social .friends_and_posts #posts::-webkit-scrollbar-track-piece {
+    background-color: #F1F1F1;
+}
+.wrapper .about_and_social .friends_and_posts #posts::-webkit-scrollbar-thumb {
+    height: 180px;
+    background-color: #E5E5E5;
+    border-radius: 3px;
+}
+.wrapper .about_and_social .friends_and_posts #posts::-webkit-scrollbar-corner {
+    background-color: #999;
+}
+.wrapper .about_and_social .friends_and_posts #posts::-webkit-resizer {
+    background-color: #666;
+}
+.wrapper .about_and_social .friends_and_posts #posts>div{
+    margin-top: 30px;
+}
+.wrapper .about_and_social .friends_and_posts #posts>div h3{
+    font-size: 38px;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+.wrapper .about_and_social .friends_and_posts #posts>div p{
+    font-size: 24px;
+    color: var(--text-color);
+    line-height: 160%;
+}
+@media screen and (max-width: 1260px){
+    .wrapper{
+        width: inherit;
+    }
+}
+@media screen and (max-width: 770px){
+    .wrapper .photo_and_links #main_profile_photo {
+        width: 150px;
+        height: 150px;
+        margin-bottom: unset;
+    }
+    .wrapper .about_and_social .friends_and_posts #friends_with_search>div img {
+        width: 80px;
+        height: 80px;
+    }
+    .wrapper .photo_and_links .list_links li a,
+    .wrapper .about_and_social .friends_and_posts #friends_with_search>div p,
+    .wrapper .about_and_social .friends_and_posts #posts>div p{
+        font-size: 19px;
+    }
+    .wrapper .about_and_social .about_profile .about_information_block p,
+    .wrapper .about_and_social .friends_and_posts #posts>div h3{
+        font-size: 24px;
+    }
+    .wrapper .about_and_social .friends_and_posts>label{
+        width: 40%;
+    }
+    .wrapper .about_and_social .about_profile .nav_counts{
+        padding: 15px 44px;
+    }
+}
+@media screen and (max-width: 450px){
+    .wrapper{
+        flex-direction: column;
+    }
+    .wrapper .about_and_social{
+        width: unset;
+    }
+    .wrapper .about_and_social .about_profile .nav_counts {
+        padding: 15px 15px;
+    }
+    .wrapper .about_and_social .about_profile .about_information_block {
+        padding: 15px 15px 0;
+    }
+    .wrapper .about_and_social .about_profile .about_information_block p,
+    .wrapper .about_and_social .friends_and_posts #posts>div h3{
+        font-size: 16px;
+    }
+    .wrapper .about_and_social .about_profile .nav_counts div span {
+        font-size: 14px;
+    }
+    .wrapper .about_and_social .about_profile .nav_counts div{
+        font-size: 11px;
+    }
+    .wrapper .about_and_social .friends_and_posts #friends_with_search #friends>div {
+        margin: 25px 0 0 15px;
+    }
+    .wrapper .photo_and_links {
+        margin-right: unset;
+        width: unset;
+        display: flex;
+        justify-content: space-between;
+    }
+    .wrapper .photo_and_links .list_links li a,
+    .wrapper .about_and_social .friends_and_posts #friends_with_search>div p,
+    .wrapper .about_and_social .friends_and_posts #posts>div p{
+        font-size: 14px;
+    }
+}
